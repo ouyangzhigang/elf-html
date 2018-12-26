@@ -27,4 +27,35 @@ preloader.addCompletionListener(function () {
 
   init()
 })
-preloader.start()
+preloader.start();
+
+function Parent () {
+  this.a = 1;
+  this.b = [1, this.a];
+  this.c = {demo: 5};
+  this.show = function () {
+    console.log(this.a + ' ' + this.c.demo + ':' + this.b);
+  }
+}
+ 
+function Child () {
+  this.a = 2;
+  this.change = function () {
+    this.b.push(this.a);
+    this.a = this.b.length;
+    this.c.demo = this.a++
+  }
+}
+
+Child.prototype = new Parent();
+var parent = new Parent();
+var child = new Child();
+
+child.a = 11;
+parent.show();
+child.show();
+
+child.change();
+
+parent.show();
+child.show();

@@ -24,3 +24,8 @@
     }
   }
 }
+.main-polymer_ {
+  display: block; min-height: 100%; padding: 0.35rem; font-size: 0.3rem;
+  .input-file {display: block; margin: 0.35rem auto; border:1px dotted #ccc; padding: 0.3rem 0.6rem; background: linear-gradient(to right, aliceblue, skyblue);}  
+}
+

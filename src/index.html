@@ -2,27 +2,26 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
-    <meta name="format-detection" content="telephone=no">
-    <title>ELF Base Template</title>
-
-    <!-- 不要删除或改变下面这行代码 -->
-    {{{__HEAD_JAVASCRIPT__}}}
-    <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
-    <link rel="import" href="/bower_components/polymer/polymer.html">
-    <link rel="import" href="/template/polymer-block.html">    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+<meta name="format-detection" content="telephone=no">
+<title>ELF Base Template</title>
+<!-- 不要删除或改变下面这行代码 -->
+{{{__HEAD_JAVASCRIPT__}}}
+<script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymer/template/polymer-block.html">    
 </head>
 
-<body>
+<body> 
     <!-- S loading 动画，对应的样式在 src/css/loading.scss -->
-    <div id="o2_loading" class="loading">
+     <div id="o2_loading" class="loading">
         <div class="inner">
             <i class="before"></i>
             <i class="after"></i>
         </div>
         <div class="text">loading</div>
-    </div>
+    </div> 
     <!-- E loading -->
 
     <!-- S 主体内容 -->
@@ -32,8 +31,21 @@
             <img class="version" src="https://img.shields.io/npm/v/elf-cli.svg?style=flat-square" preload/>
         </div>
     </div>
-    <!-- E 主体内容 -->
+ 
+    <!-- <main class="main_polymer_">
+        <video id="video" autoplay="" style='width:100%;height:480px'></video>  
+        <div><button id='picture' style="width: 100%;">PICTURE</button></div>  
+        <canvas id="canvas" width="100%" height="480"></canvas>  
+    </main>  -->
 
+    <main class="main-polymer_">
+      <p class="p">我是一个 DOM 元素。这是我的阴影 DOM ！</p>
+      <input id="inputFile" value="请选择文件" text＝"yes!ok" class="input-file" type="file" accept="image/*" capture="camcorder" />  
+      <input id="inputFile" value="请选择文件" text＝"yes!ok" class="input-file" type="file" accept="image/*" capture="microphone" />  
+      <input id="inputFile" value="请选择文件" text＝"yes!ok" class="input-file" type="file" accept="image/*" capture="camera" />  
+      <input id="inputFile" value="请选择文件" text＝"yes!ok" class="input-file" type="file" accept="image/*" />  
+    </main>
+    <!-- E 主体内容 -->
     <polymer-block></polymer-block>
 </body>
 </html>
